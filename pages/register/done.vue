@@ -21,6 +21,12 @@
 export default {
     head:{
         title: "Profile verified"
+    },
+    methods:{
+        verify(){
+            token=this.$route.query.key
+            this.$axios.post(process.env.baseUrl+"/register")
+        }
     }
 }
 </script>
